@@ -35,16 +35,16 @@ function findSolution(difficulty) {
 // 发送交易到对方服务器
 async function send_request(solution) {
     // construct a request
-    const url = "https://ec2-18-217-135-255.us-east-2.compute.amazonaws.com/validate";
+    const url = "https://ec2-18-218-197-117.us-east-2.compute.amazonaws.com/validate";
     const jsonData = {
         solution: solution,
         challenge: "0x72424e4200000000000000000000000000000000000000000000000000000000",
         address: account,
-        difficulty: "0x9999",
+        difficulty: "0x999999",
         tick: "rBNB",
     };
     headers = {
-        authority: "ec2-18-217-135-255.us-east-2.compute.amazonaws.com",
+        authority: "ec2-18-218-197-117.us-east-2.compute.amazonaws.com",
         accept: "application/json, text/plain, */*",
         "accept-language": "en,zh-CN;q=0.9,zh;q=0.8",
         "cache-control": "no-cache",
@@ -80,4 +80,4 @@ async function main(difficulty) {
     }
 }
 
-main("0x9999");
+main("0x999999");
